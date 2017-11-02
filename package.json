@@ -1,0 +1,23 @@
+{
+  "name": "egoverment-bekasi-app",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/idmore/egoverment-bekasi-app.git"
+  },
+  "author": "Idmore Team",
+  "contributors": [
+    "Yusuf A.H <yussandeveloper@gmail.com> (https://yussan.github.io)",
+    "Harry A.M"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/idmore/egoverment-bekasi-app/issues"
+  },
+  "homepage": "https://gitlab.com/idmore/egoverment-bekasi-app#README"
+}
