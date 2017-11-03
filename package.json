@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node src/server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,8 @@
   "bugs": {
     "url": "https://gitlab.com/idmore/egoverment-bekasi-app/issues"
   },
-  "homepage": "https://gitlab.com/idmore/egoverment-bekasi-app#README"
+  "homepage": "https://gitlab.com/idmore/egoverment-bekasi-app#README",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
