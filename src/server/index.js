@@ -1,10 +1,10 @@
-const app = require('express')()
+import Express from 'express'
+import Render from './render'
 const PORT = 8080
+const App = Express()
 
-app.get('/', function (req, res) {
-    res.send('Hello World!')
-})
+App.get('/', Render)
 
-app.listen(PORT, function () {
+App.listen(PORT, function () {
     console.log(`Example app listening on port ${PORT}`)
 })
