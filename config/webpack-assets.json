@@ -1,0 +1,8 @@
+{
+  "app": {
+    "js": "/bundle/app.js"
+  },
+  "vendor": {
+    "js": "/bundle/vendor.js"
+  }
+}
