@@ -722,7 +722,7 @@ var _Home = __webpack_require__(82);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Default = __webpack_require__(85);
+var _Default = __webpack_require__(87);
 
 var _Default2 = _interopRequireDefault(_Default);
 
@@ -759,7 +759,7 @@ var _BigSearch = __webpack_require__(83);
 
 var _BigSearch2 = _interopRequireDefault(_BigSearch);
 
-var _DeckResult = __webpack_require__(87);
+var _DeckResult = __webpack_require__(85);
 
 var _DeckResult2 = _interopRequireDefault(_DeckResult);
 
@@ -827,14 +827,14 @@ var Home = function (_Component) {
                         'article',
                         null,
                         _react2.default.createElement(
-                            'p',
+                            'h3',
                             null,
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum neque maximus lorem tempor sodales. Vestibulum a convallis nisi. Sed fringilla ante elit, quis rhoncus nibh congue non. Donec mollis lorem interdum dolor feugiat lacinia. Nullam eleifend tempor scelerisque. Ut aliquet erat vitae libero sodales, in egestas eros molestie. Praesent tristique nisi nec leo placerat tincidunt. Sed posuere augue in efficitur dapibus. Proin et purus sit amet nulla tincidunt lobortis eget in quam. Praesent tempor tempor pretium. Sed ornare sit amet augue sit amet convallis. Nulla tincidunt mi nulla, in scelerisque sem hendrerit non. Donec eget velit pretium dolor hendrerit malesuada tincidunt a metus. Morbi varius tellus lectus, in feugiat magna rutrum vel. Aliquam ultrices leo vitae ante maximus venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.'
+                            'Halaman Pencarian'
                         ),
                         _react2.default.createElement(
                             'p',
                             null,
-                            'Donec felis dui, dignissim quis ornare ac, ultricies nec dolor. In sollicitudin risus nec ligula sagittis aliquam. Integer tempus molestie elit, aliquam posuere ipsum. Ut nec tristique enim, in consequat tellus. Quisque convallis volutpat elit sed ultrices. Donec ut facilisis dolor. Nulla fringilla est sem, non varius odio cursus et.   '
+                            'Gunakan pencarian yang ada di halaman depan untuk sesuai dengan urusan yang akan anda lakukan di pemerintahan. Tiap anda melakukan pengetikan akan ada beberapa rekomendasi yang ditampilkan, klik rekomendasi tersebut untuk info lebih lengkap.'
                         )
                     )
                 ),
@@ -1068,93 +1068,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterConfig = __webpack_require__(32);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var DefaultLayout = function (_PureComponent) {
-    _inherits(DefaultLayout, _PureComponent);
-
-    function DefaultLayout() {
-        _classCallCheck(this, DefaultLayout);
-
-        return _possibleConstructorReturn(this, (DefaultLayout.__proto__ || Object.getPrototypeOf(DefaultLayout)).apply(this, arguments));
-    }
-
-    _createClass(DefaultLayout, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                    'div',
-                    { className: 'wrapper', id: 'wrapper' },
-                    (0, _reactRouterConfig.renderRoutes)(this.props.route.routes)
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'modal', id: 'modal' },
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'container' },
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'grid' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'col-12' },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'modal-title' },
-                                    _react2.default.createElement(
-                                        'h1',
-                                        null,
-                                        'this is title of modal'
-                                    ),
-                                    _react2.default.createElement('button', { className: 'btn-modal-close btn btn-white fa fa-close', onClick: function onClick() {
-                                            return modal.close();
-                                        }, title: 'Tampilkan berikutnya', type: 'button', style: { marginLeft: '1.5em' } })
-                                ),
-                                _react2.default.createElement('div', { className: 'modal-content' })
-                            )
-                        )
-                    )
-                )
-            );
-        }
-    }]);
-
-    return DefaultLayout;
-}(_react.PureComponent);
-
-exports.default = DefaultLayout;
-
-/***/ }),
-
-/***/ 87:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Subtitle = __webpack_require__(88);
+var _Subtitle = __webpack_require__(86);
 
 var _Subtitle2 = _interopRequireDefault(_Subtitle);
 
@@ -1311,7 +1225,7 @@ exports.default = DeckResult;
 
 /***/ }),
 
-/***/ 88:
+/***/ 86:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1352,6 +1266,92 @@ exports.default = function (props) {
         )
     );
 };
+
+/***/ }),
+
+/***/ 87:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterConfig = __webpack_require__(32);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var DefaultLayout = function (_PureComponent) {
+    _inherits(DefaultLayout, _PureComponent);
+
+    function DefaultLayout() {
+        _classCallCheck(this, DefaultLayout);
+
+        return _possibleConstructorReturn(this, (DefaultLayout.__proto__ || Object.getPrototypeOf(DefaultLayout)).apply(this, arguments));
+    }
+
+    _createClass(DefaultLayout, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                    'div',
+                    { className: 'wrapper', id: 'wrapper' },
+                    (0, _reactRouterConfig.renderRoutes)(this.props.route.routes)
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'modal', id: 'modal' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'container' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'grid' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'col-12' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'modal-title' },
+                                    _react2.default.createElement(
+                                        'h1',
+                                        null,
+                                        'this is title of modal'
+                                    ),
+                                    _react2.default.createElement('button', { className: 'btn-modal-close btn btn-white fa fa-close', onClick: function onClick() {
+                                            return modal.close();
+                                        }, title: 'Tampilkan berikutnya', type: 'button', style: { marginLeft: '1.5em' } })
+                                ),
+                                _react2.default.createElement('div', { className: 'modal-content' })
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return DefaultLayout;
+}(_react.PureComponent);
+
+exports.default = DefaultLayout;
 
 /***/ })
 

@@ -21,10 +21,11 @@ export default class Home extends Component
                 {/* modal content how to use */}
                 <div className='hide' id='modal-howtouse'>
                     <article>
+                        <h3>Halaman Pencarian</h3>
                         <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum neque maximus lorem tempor sodales. Vestibulum a convallis nisi. Sed fringilla ante elit, quis rhoncus nibh congue non. Donec mollis lorem interdum dolor feugiat lacinia. Nullam eleifend tempor scelerisque. Ut aliquet erat vitae libero sodales, in egestas eros molestie. Praesent tristique nisi nec leo placerat tincidunt. Sed posuere augue in efficitur dapibus. Proin et purus sit amet nulla tincidunt lobortis eget in quam. Praesent tempor tempor pretium. Sed ornare sit amet augue sit amet convallis. Nulla tincidunt mi nulla, in scelerisque sem hendrerit non. Donec eget velit pretium dolor hendrerit malesuada tincidunt a metus. Morbi varius tellus lectus, in feugiat magna rutrum vel. Aliquam ultrices leo vitae ante maximus venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                        <p>
-                        Donec felis dui, dignissim quis ornare ac, ultricies nec dolor. In sollicitudin risus nec ligula sagittis aliquam. Integer tempus molestie elit, aliquam posuere ipsum. Ut nec tristique enim, in consequat tellus. Quisque convallis volutpat elit sed ultrices. Donec ut facilisis dolor. Nulla fringilla est sem, non varius odio cursus et.   </p>
+                            Gunakan pencarian yang ada di halaman depan untuk sesuai dengan urusan yang akan anda lakukan di pemerintahan. Tiap anda melakukan pengetikan akan ada
+                            beberapa rekomendasi yang ditampilkan, klik rekomendasi tersebut untuk info lebih lengkap.
+                        </p>
                     </article>
                 </div>
                 {/* modal for data source */}
