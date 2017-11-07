@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Perpanjang STNK (Surat Tanda Nomor Kendaraan)",
+        "city_id": 1,
+        "department_id": 1,
+        "requirement": [
+
+        ],
+        "mechanism": [
+            
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Balik nama STNK (Surat Tanda Nomor Kendaraan)",
+        "city_id": 1,
+        "department_id": 1,
+        "requirement": [
+
+        ],
+        "mechanism": [
+            
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Membuat Surat Nikah",
+        "city_id": 1,
+        "department_id": 2,
+        "requirement": [
+
+        ],
+        "mechanism": [
+            
+        ]
+    }
+]

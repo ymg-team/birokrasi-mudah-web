@@ -1,8 +1,14 @@
 import React, {Component} from 'react'
 import Subtitle from '../atoms/Subtitle'
+import Card from '../atoms/CardResult'
 
 export default class DeckResult extends Component 
 {
+    generateCards()
+    {
+        
+    }
+
     render()
     {
         return(
@@ -16,13 +22,13 @@ export default class DeckResult extends Component
                     <div className='container'> 
                         <div className='grid'>
                             <div className='col-6_sm-12 card-result'>
-                            <div className='card-result-inside'>
-                                <div className='logo'> <img src='images/logos/polda-metro-jaya.png' title='polda metro jaya' /></div>
-                                <div className='text'>
-                                    <div className='text-title'><a href='result.html'>Cara perpanjang STNK</a></div>
-                                    <div className='text-stats'>di Polda metro jaya<br />dicari 3400x - oleh 234 pengguna </div>
+                                <div className='card-result-inside'>
+                                    <div className='logo'> <img src='images/logos/polda-metro-jaya.png' title='polda metro jaya' /></div>
+                                    <div className='text'>
+                                        <div className='text-title'><a href='result.html'>Cara perpanjang STNK</a></div>
+                                        <div className='text-stats'>di Polda metro jaya<br />dicari 3400x - oleh 234 pengguna </div>
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                             <div className='col-6_sm-12 card-result'>
                             <div className='card-result-inside'>

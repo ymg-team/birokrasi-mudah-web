@@ -835,6 +835,61 @@ var Home = function (_Component) {
                             'p',
                             null,
                             'Gunakan pencarian yang ada di halaman depan untuk sesuai dengan urusan yang akan anda lakukan di pemerintahan. Tiap anda melakukan pengetikan akan ada beberapa rekomendasi yang ditampilkan, klik rekomendasi tersebut untuk info lebih lengkap.'
+                        ),
+                        _react2.default.createElement(
+                            'h3',
+                            null,
+                            'Hasil Pencarian'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            'Dari hasil pencarian anda akan mendapatkan beberapa data antara lain :',
+                            _react2.default.createElement('br', null),
+                            _react2.default.createElement('br', null),
+                            _react2.default.createElement(
+                                'strong',
+                                null,
+                                'Lokasi'
+                            ),
+                            ', dimana urusan tersebut bisa dilakukan, lokasi meliputi data sebagai berikut (koordinat, jadwal operasional, dan lokasi lainnya jika lebih dari satu lokasi).',
+                            _react2.default.createElement('br', null),
+                            _react2.default.createElement(
+                                'strong',
+                                null,
+                                'Persyaratan'
+                            ),
+                            ', meliputi berbagai persyaratan yang wajib anda lakukan sebelum datang kekantor lembaga untuk dilakukan ke langkah selanjutnya.',
+                            _react2.default.createElement('br', null),
+                            _react2.default.createElement(
+                                'strong',
+                                null,
+                                'Mekanisme'
+                            ),
+                            ', adalah beberapa langkah yang harus anda lakukan ketika sampai di lembaga yang bersangkutan.',
+                            _react2.default.createElement('br', null),
+                            _react2.default.createElement(
+                                'strong',
+                                null,
+                                'Kontak'
+                            ),
+                            ', berbagai macam kontak yang bisa anda hubungi berdasarkan pilihan kota dan lembaga yang tertera untuk mendapatkan keterangan lebih lengkap, kontak bisa meliputi nomor telepon, email dan bahkan sosial media.'
+                        ),
+                        _react2.default.createElement(
+                            'h3',
+                            null,
+                            'Utilitas'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            'Dari ',
+                            _react2.default.createElement(
+                                'strong',
+                                null,
+                                'persyaratan dan mekanisme'
+                            ),
+                            ' yang ada di halaman hasil pencarian terdapat checklist yang membantu anda untuk menandai bagian mana saja yang sudah dikerjakan atau belum, untuk kemudian tekan tombol save dan autosave untuk dibuka di haris berikutnya. Anda bisa menyimpan hasil pencarian tersebut kedokumen PDF untuk digunakan kemudian sesuai kebutuhan.'
                         )
                     )
                 ),
@@ -844,7 +899,25 @@ var Home = function (_Component) {
                     _react2.default.createElement(
                         'article',
                         null,
-                        'this is data source'
+                        'Data yang tambil di platform ini, didapatkan dari beberapa sumber :',
+                        _react2.default.createElement('br', null),
+                        _react2.default.createElement('br', null),
+                        _react2.default.createElement(
+                            'strong',
+                            null,
+                            'Admin "BirokrasiMudah"'
+                        ),
+                        ', diinput oleh admin berdasarkan hasil pengamatan langsung di kantor lembaga, pengalaman sendiri, dan pengalaman dari pengguna platform.',
+                        _react2.default.createElement('br', null),
+                        _react2.default.createElement(
+                            'strong',
+                            null,
+                            'Perwakilan Lembaga'
+                        ),
+                        ', langsung diinput oleh perwakilan lembaga yang sudah mendapatkan akses ke platform.',
+                        _react2.default.createElement('br', null),
+                        _react2.default.createElement('br', null),
+                        'Pengguna bisa mengetahui penulis konten di hasil pencarian menggunakan menu log.'
                     )
                 ),
                 _react2.default.createElement(
@@ -853,7 +926,12 @@ var Home = function (_Component) {
                     _react2.default.createElement(
                         'article',
                         null,
-                        'this is kontak'
+                        'Jika anda menemukan bug, kritik dan saran, atau kontak tim kami secara langsung silahkan mengirimkan email ke ',
+                        _react2.default.createElement(
+                            'a',
+                            { style: { color: '#F4F4F4' }, href: 'mailto:yussandeveloper@gmail.com' },
+                            'yussandeveloper@gmail.com'
+                        )
                     )
                 ),
                 _react2.default.createElement('div', { 'class': 'm-lg' }),
@@ -1072,6 +1150,10 @@ var _Subtitle = __webpack_require__(86);
 
 var _Subtitle2 = _interopRequireDefault(_Subtitle);
 
+var _CardResult = __webpack_require__(89);
+
+var _CardResult2 = _interopRequireDefault(_CardResult);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1090,6 +1172,9 @@ var DeckResult = function (_Component) {
     }
 
     _createClass(DeckResult, [{
+        key: 'generateCards',
+        value: function generateCards() {}
+    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -1352,6 +1437,103 @@ var DefaultLayout = function (_PureComponent) {
 }(_react.PureComponent);
 
 exports.default = DefaultLayout;
+
+/***/ }),
+
+/***/ 89:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var CardResult = function (_PureComponent) {
+    _inherits(CardResult, _PureComponent);
+
+    function CardResult() {
+        _classCallCheck(this, CardResult);
+
+        return _possibleConstructorReturn(this, (CardResult.__proto__ || Object.getPrototypeOf(CardResult)).apply(this, arguments));
+    }
+
+    _createClass(CardResult, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'col-6_sm-12 card-result' },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'card-result-inside' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'logo' },
+                        _react2.default.createElement('img', { src: this.props.image, title: this.props.title })
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'text' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'text-title' },
+                            _react2.default.createElement(
+                                'a',
+                                { href: this.props.target },
+                                this.props.target
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'text-stats' },
+                            'di ',
+                            this.props.location,
+                            _react2.default.createElement('br', null),
+                            'dicari ',
+                            this.props.count.search,
+                            'x - oleh ',
+                            this.props.count.user,
+                            ' pengguna '
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return CardResult;
+}(_react.PureComponent);
+
+CardResult.propTypes = {
+    title: _propTypes2.default.string.isRequired,
+    target: _propTypes2.default.string.isRequired,
+    location: _propTypes2.default.string.isRequired,
+    count: _propTypes2.default.shape({
+        search: _propTypes2.default.number,
+        user: _propTypes2.default.number
+    })
+};
+exports.default = CardResult;
 
 /***/ })
 

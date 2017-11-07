@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "department": 1,
+        "city": 1,
+        "coordinats": [
+            {
+                "lng": 0.00087678,
+                "lat": 0.873763683,
+                "schedule": {
+                    "sunday": {
+                        "start": "234324324", "end": "32432434324"
+                    },
+                    "monday": {
+                        "start": "1231234", "end": "32434324"
+                    }
+                }
+            }
+        ],
+        "contacts": [
+            {
+                "type": "web",
+                "value": "https://bekasikota.go.id/samsat"
+            }
+        ]
+    }
+]
