@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch src/ --watch assets/ --exec 'node -r babel-register' ./src/server/index",
+    "start": "nodemon --watch src/ --watch build/ --exec 'node -r babel-register' ./src/server/index",
     "dev:build": "webpack --watch --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

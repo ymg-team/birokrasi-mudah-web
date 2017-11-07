@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Bigsearch from '../components/molecules/BigSearch'
+import DeckResult from '../components/molecules/DeckResult'
 
 export default class Home extends Component 
 {
@@ -12,12 +13,12 @@ export default class Home extends Component
                     <div className='grid-center'> 
                         <div className='col-8_col-md-12_col-sm-12 home-help'>
                             <a href='javascript:;' onClick={() => modal.show('Cara Menggunakan', 'modal-howtouse')}>Cara Menggunakan</a>
-                            <a href='javascript:;' onClick={() => modal.show('Sumber Data', 'modal-source')}>Sumber Data</a>
+                            <a href='javascript:;' onClick={() => modal.show('Sumber Data', 'modal-datasource')}>Sumber Data</a>
                             <a href='javascript:;' onClick={() => modal.show('Kontak kami', 'modal-contact')}>Kontak Kami</a>
                         </div>
                     </div>
                 </div>
-                {/* modal content */}
+                {/* modal content how to use */}
                 <div className='hide' id='modal-howtouse'>
                     <article>
                         <p>
@@ -26,8 +27,29 @@ export default class Home extends Component
                         Donec felis dui, dignissim quis ornare ac, ultricies nec dolor. In sollicitudin risus nec ligula sagittis aliquam. Integer tempus molestie elit, aliquam posuere ipsum. Ut nec tristique enim, in consequat tellus. Quisque convallis volutpat elit sed ultrices. Donec ut facilisis dolor. Nulla fringilla est sem, non varius odio cursus et.   </p>
                     </article>
                 </div>
+                {/* modal for data source */}
+                <div className='hide' id='modal-datasource'>
+                    <article>
+                        this is data source
+                    </article>
+                </div>
+                {/* modal data contact */}
+                <div className='hide' id='modal-contact'>
+                    <article>
+                        this is kontak
+                    </article>
+                </div>
 
-                {/* end of modal content */}
+                <div class="m-lg" />
+
+                {/* start of deck result */}
+                <DeckResult 
+                    title='Pencarian Populer'
+                    subtitle='Berikut adalah beberapa keperluan yang sering dicari oleh pengunjung.'
+                    showmore={true}
+                />
+                {/* end of deck result */}
+
             </div>
         )
     }

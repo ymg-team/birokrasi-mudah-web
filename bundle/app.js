@@ -759,6 +759,10 @@ var _BigSearch = __webpack_require__(83);
 
 var _BigSearch2 = _interopRequireDefault(_BigSearch);
 
+var _DeckResult = __webpack_require__(87);
+
+var _DeckResult2 = _interopRequireDefault(_DeckResult);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -802,7 +806,7 @@ var Home = function (_Component) {
                             _react2.default.createElement(
                                 'a',
                                 { href: 'javascript:;', onClick: function onClick() {
-                                        return modal.show('Sumber Data', 'modal-source');
+                                        return modal.show('Sumber Data', 'modal-datasource');
                                     } },
                                 'Sumber Data'
                             ),
@@ -833,7 +837,31 @@ var Home = function (_Component) {
                             'Donec felis dui, dignissim quis ornare ac, ultricies nec dolor. In sollicitudin risus nec ligula sagittis aliquam. Integer tempus molestie elit, aliquam posuere ipsum. Ut nec tristique enim, in consequat tellus. Quisque convallis volutpat elit sed ultrices. Donec ut facilisis dolor. Nulla fringilla est sem, non varius odio cursus et.   '
                         )
                     )
-                )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'hide', id: 'modal-datasource' },
+                    _react2.default.createElement(
+                        'article',
+                        null,
+                        'this is data source'
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'hide', id: 'modal-contact' },
+                    _react2.default.createElement(
+                        'article',
+                        null,
+                        'this is kontak'
+                    )
+                ),
+                _react2.default.createElement('div', { 'class': 'm-lg' }),
+                _react2.default.createElement(_DeckResult2.default, {
+                    title: 'Pencarian Populer',
+                    subtitle: 'Berikut adalah beberapa keperluan yang sering dicari oleh pengunjung.',
+                    showmore: true
+                })
             );
         }
     }]);
@@ -1107,6 +1135,223 @@ var DefaultLayout = function (_PureComponent) {
 }(_react.PureComponent);
 
 exports.default = DefaultLayout;
+
+/***/ }),
+
+/***/ 87:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Subtitle = __webpack_require__(88);
+
+var _Subtitle2 = _interopRequireDefault(_Subtitle);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var DeckResult = function (_Component) {
+    _inherits(DeckResult, _Component);
+
+    function DeckResult() {
+        _classCallCheck(this, DeckResult);
+
+        return _possibleConstructorReturn(this, (DeckResult.__proto__ || Object.getPrototypeOf(DeckResult)).apply(this, arguments));
+    }
+
+    _createClass(DeckResult, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'deck-result' },
+                _react2.default.createElement('div', { className: 'container' }),
+                _react2.default.createElement(_Subtitle2.default, {
+                    title: this.props.title,
+                    subtitle: this.props.subtitle
+                }),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'deck-result-content' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'container' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'grid' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'col-6_sm-12 card-result' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'card-result-inside' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'logo' },
+                                        ' ',
+                                        _react2.default.createElement('img', { src: 'images/logos/polda-metro-jaya.png', title: 'polda metro jaya' })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'text' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'text-title' },
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: 'result.html' },
+                                                'Cara perpanjang STNK'
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'text-stats' },
+                                            'di Polda metro jaya',
+                                            _react2.default.createElement('br', null),
+                                            'dicari 3400x - oleh 234 pengguna '
+                                        )
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'col-6_sm-12 card-result' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'card-result-inside' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'logo' },
+                                        ' ',
+                                        _react2.default.createElement('img', { src: 'images/logos/kua.png', title: 'KUA' })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'text' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'text-title' },
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: 'result.html' },
+                                                'Membuat surat nikah'
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'text-stats' },
+                                            'di KUA daerah 1',
+                                            _react2.default.createElement('br', null),
+                                            'dicari 3400x - oleh 234 pengguna '
+                                        )
+                                    )
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'col-6_sm-12 card-result' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'card-result-inside' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'logo' },
+                                        ' ',
+                                        _react2.default.createElement('img', { src: 'images/logos/bp2t.png', title: 'KUA' })
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'text' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'text-title' },
+                                            _react2.default.createElement(
+                                                'a',
+                                                { href: 'result.html' },
+                                                'Membuat surat izin usaha'
+                                            )
+                                        ),
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'text-stats' },
+                                            'di KUA daerah 1',
+                                            _react2.default.createElement('br', null),
+                                            'dicari 3400x - oleh 234 pengguna '
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return DeckResult;
+}(_react.Component);
+
+exports.default = DeckResult;
+
+/***/ }),
+
+/***/ 88:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (props) {
+    return _react2.default.createElement(
+        'div',
+        { className: 'grid' },
+        _react2.default.createElement(
+            'div',
+            { className: 'col-12' },
+            _react2.default.createElement(
+                'div',
+                { className: 'subtitle' },
+                _react2.default.createElement(
+                    'h3',
+                    { className: 'title' },
+                    props.title
+                ),
+                _react2.default.createElement(
+                    'p',
+                    null,
+                    props.subtitle,
+                    '.'
+                )
+            )
+        )
+    );
+};
 
 /***/ })
 
