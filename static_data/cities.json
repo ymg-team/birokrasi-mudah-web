@@ -1,4 +1,10 @@
-export default {
-    1: 'Kota Bekasi',
-    2: 'Kabupaten Sleman'
-}
+[
+    {
+        "id": 1,
+        "name": "Kota Bekasi"
+    },
+    {
+        "id": 2,
+        "name": "Kabupaten Sleman"
+    }
+]

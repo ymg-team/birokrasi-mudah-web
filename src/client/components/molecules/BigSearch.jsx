@@ -6,7 +6,12 @@ export default class Bigsearch extends Component
 
     handleChangeText(e)
     {
-        console.log(e)
+        console.log(e.target.value)
+    }
+
+    handleReccomendation(val)
+    {
+        console.log(e.target.value)   
     }
 
     render()
@@ -31,7 +36,12 @@ export default class Bigsearch extends Component
                         <form className='form-container'>
                             <div className='form-control' style={{position: 'relative'}}>
                                 <i className='fa fa-search icon-home-search'> </i>
-                                <input className='input-lg input-outline-white input-home-search' id='big-search-input' type='text' placeholder='Apa yang ingin anda urus ?' />
+                                <input 
+                                    onChange={(e) => this.handleChangeText(e)}
+                                    className='input-lg input-outline-white input-home-search' 
+                                    id='big-search-input' 
+                                    type='text' 
+                                    placeholder='Apa yang ingin anda urus ?' />
                                 <small>contoh: membuat surat nikah, perpanjang STNK, dll</small>
                                 <Recomendation />
                             </div>

@@ -991,11 +991,18 @@ var Bigsearch = function (_Component) {
     _createClass(Bigsearch, [{
         key: 'handleChangeText',
         value: function handleChangeText(e) {
-            console.log(e);
+            console.log(e.target.value);
+        }
+    }, {
+        key: 'handleReccomendation',
+        value: function handleReccomendation(val) {
+            console.log(e.target.value);
         }
     }, {
         key: 'render',
         value: function render() {
+            var _this2 = this;
+
             return _react2.default.createElement(
                 'nav',
                 { className: 'main bigsearch' },
@@ -1056,7 +1063,14 @@ var Bigsearch = function (_Component) {
                                         { className: 'fa fa-search icon-home-search' },
                                         ' '
                                     ),
-                                    _react2.default.createElement('input', { className: 'input-lg input-outline-white input-home-search', id: 'big-search-input', type: 'text', placeholder: 'Apa yang ingin anda urus ?' }),
+                                    _react2.default.createElement('input', {
+                                        onChange: function onChange(e) {
+                                            return _this2.handleChangeText(e);
+                                        },
+                                        className: 'input-lg input-outline-white input-home-search',
+                                        id: 'big-search-input',
+                                        type: 'text',
+                                        placeholder: 'Apa yang ingin anda urus ?' }),
                                     _react2.default.createElement(
                                         'small',
                                         null,
