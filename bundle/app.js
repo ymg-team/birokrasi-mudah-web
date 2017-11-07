@@ -989,6 +989,11 @@ var Bigsearch = function (_Component) {
     }
 
     _createClass(Bigsearch, [{
+        key: 'handleChangeText',
+        value: function handleChangeText(e) {
+            console.log(e);
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(

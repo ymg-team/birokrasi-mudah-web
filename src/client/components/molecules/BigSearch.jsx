@@ -3,6 +3,12 @@ import Recomendation from '../atoms/BigSearchRecomendation'
 
 export default class Bigsearch extends Component 
 {
+
+    handleChangeText(e)
+    {
+        console.log(e)
+    }
+
     render()
     {
         return(
