@@ -1590,14 +1590,16 @@ select.home-select-white {
     text-align: center; }
     .modal .modal-title h1, .modal .modal-title h2 {
       font-weight: 300; }
-  .modal .modal-content p {
-    line-height: 1.5;
-    margin-bottom: .5em; }
+  .modal .modal-content {
+    overflow: auto;
+    max-height: calc(100vh - 180px); }
+    .modal .modal-content p {
+      line-height: 1.5;
+      margin-bottom: .5em; }
 
 .big-result {
   background: #f4f4f4;
-  padding: 2em;
-  margin-bottom: 2em; }
+  padding: 2em; }
   .big-result .big-result-item {
     padding: 1em;
     color: #FFF; }

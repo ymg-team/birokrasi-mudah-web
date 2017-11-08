@@ -1,17 +1,49 @@
 import React, {Component} from 'react'
 import Recomendation from '../atoms/BigSearchRecomendation'
+import {Link} from 'react-router-dom'
+import apiCaller from '../../../utils/apiCaller'
+
+let timer = null 
 
 export default class Bigsearch extends Component 
 {
 
-    handleChangeText(e)
+    constructor()
     {
-        console.log(e.target.value)
+        super()
+        this.state = {
+            recommendations: [],
+            loading: false
+        }
     }
 
-    handleReccomendation(val)
+    handleChangeText(e)
     {
-        console.log(e.target.value)   
+        console.log('reset timer...')
+        recomendation.loading()
+        clearTimeout(timer)
+        const {value} = e.target
+        this.setState({
+            loading: value != ''
+        }, () => {
+            if(value != '')
+                timer = setTimeout(() => this.getRecommendation(value), 2000)
+            else 
+                recomendation.close()
+        })
+    }
+
+    getRecommendation(val)
+    {
+        console.log('show recommentaion...')
+        this.setState({
+            loading: false
+        }, () => {
+            apiCaller('get', `/api/recommendation?q=${val}`,).then(res => {
+                console.log(res)
+                recomendation.show(res.result)
+            })
+        })
     }
 
     render()
@@ -19,7 +51,11 @@ export default class Bigsearch extends Component
         return(
             <nav className='main bigsearch'> 
                 <div className='grid'> 
-                    <div className='col-3 logo'> <a href='home.html' title='Logo Birokrasi Mudah'><img src='/images/whitelogo.png' /></a></div>
+                    <div className='col-3 logo'> 
+                        <Link to='/' title='Logo Birokrasi Mudah'>
+                            <img src='/images/whitelogo.png' />
+                        </Link>
+                    </div>
                 </div>
                 <div className='container'> 
                     <div className='m-lg' />
@@ -43,7 +79,9 @@ export default class Bigsearch extends Component
                                     type='text' 
                                     placeholder='Apa yang ingin anda urus ?' />
                                 <small>contoh: membuat surat nikah, perpanjang STNK, dll</small>
-                                <Recomendation />
+                                <Recomendation 
+                                    data={[]}
+                                />
                             </div>
                         </form>
                     </div>
