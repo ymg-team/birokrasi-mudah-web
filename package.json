@@ -24,6 +24,7 @@
   "homepage": "https://gitlab.com/idmore/egoverment-bekasi-app#README",
   "dependencies": {
     "express": "^4.16.2",
+    "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
@@ -31,7 +32,8 @@
     "react-router": "^4.2.0",
     "react-router-config": "^1.0.0-beta.4",
     "react-router-dom": "^4.2.2",
-    "string-manager": "^1.1.3-beta-1"
+    "string-manager": "^1.1.3-beta-1",
+    "superagent": "^3.8.0"
   },
   "devDependencies": {
     "assets-webpack-plugin": "^3.5.1",

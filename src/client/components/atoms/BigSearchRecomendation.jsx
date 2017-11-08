@@ -4,6 +4,7 @@ export default class Recomendation extends PureComponent
 {
     render()
     {
+        console.log(this.props.loading)
         return(
             <div className='deck-result' id='bigsearch-recomendation'>
                 <div className='deck-result-content bg-white' style={{padding: 0}}>
@@ -13,3 +14,11 @@ export default class Recomendation extends PureComponent
         )
     }
 }
+
+const Loading = () => (
+    <div className='col-12 card-result card-result-small'>
+        <div className='card-result-inside'>
+            mengamil data...
+        </div>
+    </div>
+)

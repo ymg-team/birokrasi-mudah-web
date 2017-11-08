@@ -65,7 +65,7 @@ export default class Home extends Component
                     </article>
                 </div>
 
-                <div class="m-lg" />
+                <div className='m-lg' />
 
                 {/* start of deck result */}
                 <DeckResult 
