@@ -1,4 +1,4 @@
-function jsonResponse(code=500, string, data)
+function jsonResponse(code=500, msg, data)
 {
     let res = {}
     switch(code)
