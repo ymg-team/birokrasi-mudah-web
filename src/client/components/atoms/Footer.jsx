@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react'
 
-export default class PureComponent extends PureComponent 
+export default class Footer extends PureComponent 
 {
     render()
     {
@@ -10,8 +10,8 @@ export default class PureComponent extends PureComponent
                     <div className='col-5_md-6_sm-12'>
                         <small> 
                             <strong>BirokrasiMudah </strong>
-                            <br>
-                            Membantu pengguna untuk mengurus birokrasi, mulai dari tahap awal hingga tahap akhir, secara detail dan interaktif.<br><br>Dibuat oleh Yusuf A.H. dan Harry A.M.
+                            <br/>
+                            Membantu pengguna untuk mengurus birokrasi, mulai dari tahap awal hingga tahap akhir, secara detail dan interaktif.<br/><br/>Dibuat oleh Yusuf A.H. dan Harry A.M.
                         </small>
                     </div>
                 </footer>

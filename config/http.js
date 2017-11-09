@@ -1,4 +1,4 @@
-export function jsonResponse(code: number=500, msg?: string, data?: Object): Object
+function jsonResponse(code=500, string, data)
 {
     let res = {}
     switch(code)
@@ -30,3 +30,5 @@ export function jsonResponse(code: number=500, msg?: string, data?: Object): Obj
 
     return res
 }
+
+module.exports.jsonResponse = jsonResponse
