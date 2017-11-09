@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --watch src/ --watch build/ --exec 'node -r babel-register' ./src/server/index",
-    "dev:build": "webpack --watch --progress",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "webpack": "webpack --watch --progress",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod:build": "npm run prod:webpack && npm run prod:babel",
+    "prod:webpack": "rimraf bundle && NODE_ENV=production webpack --progress",
+    "prod:babel": "rimraf dist && babel src -d dist --ignore '**/*_test.js'"
   },
   "repository": {
     "type": "git",
@@ -37,12 +40,14 @@
   },
   "devDependencies": {
     "assets-webpack-plugin": "^3.5.1",
+    "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
     "nodemon": "^1.12.1",
+    "rimraf": "^2.6.2",
     "webpack": "^3.8.1"
   }
 }
