@@ -20,14 +20,14 @@ export default class Bigsearch extends Component
     handleChangeText(e)
     {
         console.log('reset timer...')
-        recomendation.loading()
+        recomendation.setText('Memulai pencarian...')
         clearTimeout(timer)
         const {value} = e.target
         this.setState({
             loading: value != ''
         }, () => {
             if(value != '')
-                timer = setTimeout(() => this.getRecommendation(value), 2000)
+                timer = setTimeout(() => this.getRecommendation(value), 1000)
             else 
                 recomendation.close()
         })
@@ -35,13 +35,15 @@ export default class Bigsearch extends Component
 
     getRecommendation(val)
     {
-        console.log('show recommentaion...')
+        console.log('get recommentaion...')
         this.setState({
             loading: false
         }, () => {
-            apiCaller('get', `/api/recommendation?q=${val}`,).then(res => {
-                console.log(res)
-                recomendation.show(res.result)
+            apiCaller('get', `/api/recommendation?keyword=${val}`,).then(res => {
+                if(res.status == 204) 
+                    recomendation.setText('Data tidak ditemukan.')
+                else if(res.status == 200)
+                    recomendation.show(recommendationTransform(res.result))
             })
         })
     }
@@ -92,4 +94,19 @@ export default class Bigsearch extends Component
 
         )
     }
+}
+
+function recommendationTransform(data)
+{
+    let nextdata = []
+
+    data.map(n => {
+        nextdata.push({
+            logo: 'http://birokrasi-mudah.netlify.com/images/logos/polda-metro-jaya.png',
+            link: '/hasil/' + (n.title.replace(/ /g,'-')) + '-' + n.id,
+            text: n.title
+        })
+    })
+
+    return nextdata
 }

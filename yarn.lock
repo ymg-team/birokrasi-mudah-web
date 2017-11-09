@@ -3130,6 +3130,10 @@ slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
 
+smart-search@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/smart-search/-/smart-search-0.2.0.tgz#7bf9827ec5ca37922045d2dfdf2a49baebf055dd"
+
 sntp@1.x.x:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/sntp/-/sntp-1.0.9.tgz#6541184cc90aeea6c6e7b35e2659082443c66198"

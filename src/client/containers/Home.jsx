@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Helmet from '../components/atoms/Helmet'
 import Bigsearch from '../components/molecules/BigSearch'
 import DeckResult from '../components/molecules/DeckResult'
 
@@ -8,6 +9,9 @@ export default class Home extends Component
     {
         return (
             <div>
+                <Helmet 
+                    title='Birokrasi Mudah - Iya.. serius !'
+                />
                 <Bigsearch />
                 <div className='container'>
                     <div className='grid-center'> 
