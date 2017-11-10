@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "title": "Perpanjang STNK (Surat Tanda Nomor Kendaraan)",
+        "title": "Pajak Tahunan STNK (Surat Tanda Nomor Kendaraan) Roda 2",
         "logo": "/images/logos/samsat.png",
         "department": "Samsat Kota Bekasi",
         "city_id": 1,
@@ -30,10 +30,20 @@
            {"type": "phone", "value": "(022) 756 6197", "desc": "CPPD Kota Bekasi (Samsat Kota Bekasi)"}
         ],
         "requirement": [
-
+            "Biaya administrasi Rp 100.000,-",
+            "Biaya Penerbitan Tanda Nomor Kendaraan (TNKB) atau yang dikenal sebagai plat nomor, sebesar Rp 60.000 .",
+            "Biaya penerbitan BPKB sebesar Rp 225.000 .",
+            "Biaya penerbitan surat mutasi kendaraan bermotor ke luar daerah Rp 150.000 .",
+            "STNK asli dan fotokopiannya (minimal 1 lembar)",
+            "Fotokopi BPKB",
+            "KTP asli dan fotokopiannya (minimal 1 lembar) sesuai nama yang tercantum pada STNK dan BPKB."
         ],
         "mechanism": [
-            
+            "Ambil formulir permohonan perpanjang STNK di loket pendaftaran, isi data sesuai dengan pada STNK dan BPKB",
+            "Lampirkan dokumen yang tertulis di formulir, untuk kemudian diserahkan ke loket penyerahan berkas",
+            "Kamu akan mendapatkan slip pembayaran pajak dan kamu bisa melihat berapa besar pajak yang harus kamu bayarkan.",
+            "Pergilah ke kasir untuk membayar pajak tersebut. Setelah membayar pajak perpanjang STNK, kamu akan mendapatkan bukti pelunasan pajak. Lalu serahkan bukti pelunasan pajak ke loket pengambilan STNK.",
+            "Setelah itu nama kamu akan dipanggil dan STNK barumu telah diperpanjang satu tahun."
         ]
     },
     {
@@ -72,10 +82,18 @@
         "city_id": 1,
         "department_id": 2,
         "requirement": [
-            
+            "Akte kelahiran asli beserta fotocopy ( jika tidak memilikinya sertakan buku nikah dan ijazah sd/smp/sma asli beserta fotocopy )",
+            "KK ( Kartu Keluarga ) asli beserta fotocopy.",
+            "KTP ( Kartu Tanda Penduduk ) asli beserta fotocopy.",
+            "Jika memiliki anak yang ingin dibuat paspor, bawa dokumen berikut (Buku nikah orang tua dan paspor orang tua (jika ada) )",
+            "Materai Rp 6000,-"
         ],
         "mechanism": [
-            
+            "Ambil formulir di pos satpam yang berada di depan kantor imigrasi.",
+            "Datanglah lebih pagi, kantor imigrasi akan buka pada pukul 07.00 – 16.00 dan istirahat pada pukul 12.00 – 13.00, biasanya kantor imigrasi sudah di penuhi oleh masyarakat pada pukul 09.00 oleh karena itu bagus jika kamu datang sebelum jam tersebut.",
+            "Gunakanlah pakaian yang rapih dan bersih karena foto di paspor akan terus kamu gunakan sampai 5 tahun ke depan. Bagus jika kamu menggunakan pakaian selain warna putih karena background sesi foto akan berwarna putih.",
+            "Ambil nomor antrian dan silahkan menunggu panggilan",
+            ""
         ]
     },
     {

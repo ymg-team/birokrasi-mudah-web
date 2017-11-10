@@ -1,4 +1,5 @@
 import React, {PureComponent} from 'react'
+import {pushData} from '../../store/result'
 import {Link} from 'react-router-dom'
 
 export default class Recomendation extends PureComponent
@@ -32,7 +33,9 @@ const RecommendationItem = (props) => (
         </div>
         <div className='text'>
             <div className='text-title'>
-                <Link to={'/hasil/'+ (props.title.replace(/ /g,'-')) + '-' + props.id}>{props.title}</Link>
+                <Link 
+                    onClick={() => {pushData(props)}}
+                    to={'/hasil/'+ (props.title.replace(/ /g,'-')) + '-' + props.id}>{props.title}</Link>
             </div>
         </div>
         </div>

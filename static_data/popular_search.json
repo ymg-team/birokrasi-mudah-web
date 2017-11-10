@@ -1,1 +1,38 @@
-[1,2,3]
+[
+    {
+        "title": "Pajak Tahunan STNK (Surat Tanda Nomor Kendaraan) Roda 2",
+        "link": "http://localhost:5000/hasil/Pajak-Tahunan-STNK-(Surat-Tanda-Nomor-Kendaraan)-Roda-2-1",
+        "logo": "/images/logos/samsat.png",
+        "count": {
+            "search": 3456,
+            "users": 3200
+        }
+    },
+    {
+        "title": "Pajak Tahunan STNK (Surat Tanda Nomor Kendaraan) Roda 2",
+        "link": "http://localhost:5000/hasil/Pajak-Tahunan-STNK-(Surat-Tanda-Nomor-Kendaraan)-Roda-2-1",
+        "logo": "/images/logos/samsat.png",
+        "count": {
+            "search": 3456,
+            "users": 3200
+        }
+    },
+    {
+        "title": "Pajak Tahunan STNK (Surat Tanda Nomor Kendaraan) Roda 2",
+        "link": "http://localhost:5000/hasil/Pajak-Tahunan-STNK-(Surat-Tanda-Nomor-Kendaraan)-Roda-2-1",
+        "logo": "/images/logos/samsat.png",
+        "count": {
+            "search": 3456,
+            "users": 3200
+        }
+    },
+    {
+        "title": "Pajak Tahunan STNK (Surat Tanda Nomor Kendaraan) Roda 2",
+        "link": "http://localhost:5000/hasil/Pajak-Tahunan-STNK-(Surat-Tanda-Nomor-Kendaraan)-Roda-2-1",
+        "logo": "/images/logos/samsat.png",
+        "count": {
+            "search": 3456,
+            "users": 3200
+        }
+    }
+]
