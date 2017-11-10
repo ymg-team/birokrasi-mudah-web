@@ -1,8 +1,12 @@
 [
-    { "keyword": "cara perpanjang STNK", "id": 1 },
-    { "keyword": "balik nama STNK", "id": 2 },
-    { "keyword": "membuat Surat Nikah", "id": 3 },
-    { "keyword": "perpanjang STNK", "id": 1 },
+    { "keyword": "cara perpanjang stnk", "id": 1 },
+    { "keyword": "balik nama stnk", "id": 2 },
+    { "keyword": "membuat surat nikah", "id": 3 },
+    { "keyword": "mengurus surat nikah", "id": 3 },
+    { "keyword": "perpanjang stnk", "id": 1 },
+    { "keyword": "stnk habis", "id": 1 },
     { "keyword": "membuat paspor", "id": 4 },
-    { "keyword": "membuat npwp", "id": 5 }
+    { "keyword": "membuat npwp", "id": 5 },
+    { "keyword": "npwp baru", "id": 5 },
+    { "keyword": "paspor baru", "id": 4 }
 ]
