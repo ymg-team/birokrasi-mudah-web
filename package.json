@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon --watch src/ --watch build/ --exec 'node -r babel-register' ./src/server/index",
     "webpack": "webpack --watch --progress",
+    "heroku-postbuildls": "npm run prod:build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prod:build": "npm run prod:webpack && npm run prod:babel",
     "prod:webpack": "rimraf bundle && NODE_ENV=production webpack --progress",
