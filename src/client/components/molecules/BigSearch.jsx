@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Recomendation from '../atoms/BigSearchRecomendation'
+import Recomendation, {RecommendationText} from '../atoms/BigSearchRecomendation'
 import {Link} from 'react-router-dom'
 import apiCaller from '../../../utils/apiCaller'
 
@@ -12,7 +12,7 @@ export default class Bigsearch extends Component
     {
         super()
         this.state = {
-            recommendations: [],
+            result: [],
             loading: false
         }
     }
@@ -20,7 +20,6 @@ export default class Bigsearch extends Component
     handleChangeText(e)
     {
         console.log('reset timer...')
-        recomendation.setText('Memulai pencarian...')
         clearTimeout(timer)
         const {value} = e.target
         this.setState({
@@ -29,7 +28,7 @@ export default class Bigsearch extends Component
             if(value != '')
                 timer = setTimeout(() => this.getRecommendation(value), 1000)
             else 
-                recomendation.close()
+                this.setState({result: []})
         })
     }
 
@@ -39,11 +38,11 @@ export default class Bigsearch extends Component
         this.setState({
             loading: false
         }, () => {
-            apiCaller('get', `/api/recommendation?keyword=${val}`,).then(res => {
-                if(res.status == 204) 
-                    recomendation.setText('Data tidak ditemukan.')
-                else if(res.status == 200)
-                    recomendation.show(recommendationTransform(res.result))
+            apiCaller('get', `/api/recommendation?keyword=${val}`,).then(result => {
+                this.setState({
+                    loading: false, 
+                    result
+                })
             })
         })
     }
@@ -82,10 +81,23 @@ export default class Bigsearch extends Component
                                     id='big-search-input' 
                                     type='text' 
                                     placeholder='Apa yang ingin anda urus ?' />
-                                <small>contoh: membuat surat nikah, perpanjang STNK, dll</small>
-                                <Recomendation 
-                                    data={[]}
-                                />
+                                {
+                                    this.state.loading ? <RecommendationText text='Melakukan pencarian' /> : null
+                                }
+                                {
+                                    !this.state.loading && this.state.result.length == 0 ?
+                                        <small>contoh: membuat surat nikah, perpanjang STNK, dll</small>
+                                    : null
+                                }
+                                {
+                                    !this.state.loading && this.state.result.status ? 
+                                        this.state.result.status == 200 ?
+                                        <Recomendation 
+                                            data={this.state.result.result}
+                                        />
+                                        : <RecommendationText text='Hasil pencarian tidak ditemukan' />
+                                    : null
+                                }
                             </div>
                         </form>
                     </div>

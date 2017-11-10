@@ -2757,7 +2757,7 @@ var Bigsearch = function (_Component) {
         var _this = _possibleConstructorReturn(this, (Bigsearch.__proto__ || Object.getPrototypeOf(Bigsearch)).call(this));
 
         _this.state = {
-            recommendations: [],
+            result: [],
             loading: false
         };
         return _this;
@@ -2769,7 +2769,6 @@ var Bigsearch = function (_Component) {
             var _this2 = this;
 
             console.log('reset timer...');
-            recomendation.setText('Memulai pencarian...');
             clearTimeout(timer);
             var value = e.target.value;
 
@@ -2778,25 +2777,30 @@ var Bigsearch = function (_Component) {
             }, function () {
                 if (value != '') timer = setTimeout(function () {
                     return _this2.getRecommendation(value);
-                }, 1000);else recomendation.close();
+                }, 1000);else _this2.setState({ result: [] });
             });
         }
     }, {
         key: 'getRecommendation',
         value: function getRecommendation(val) {
+            var _this3 = this;
+
             console.log('get recommentaion...');
             this.setState({
                 loading: false
             }, function () {
-                (0, _apiCaller2.default)('get', '/api/recommendation?keyword=' + val).then(function (res) {
-                    if (res.status == 204) recomendation.setText('Data tidak ditemukan.');else if (res.status == 200) recomendation.show(recommendationTransform(res.result));
+                (0, _apiCaller2.default)('get', '/api/recommendation?keyword=' + val).then(function (result) {
+                    _this3.setState({
+                        loading: false,
+                        result: result
+                    });
                 });
             });
         }
     }, {
         key: 'render',
         value: function render() {
-            var _this3 = this;
+            var _this4 = this;
 
             return _react2.default.createElement(
                 'nav',
@@ -2859,7 +2863,7 @@ var Bigsearch = function (_Component) {
                                     ),
                                     _react2.default.createElement('input', {
                                         onChange: function onChange(e) {
-                                            return _this3.handleChangeText(e);
+                                            return _this4.handleChangeText(e);
                                         },
                                         autoComplete: 'off',
                                         autoCorrect: 'off',
@@ -2867,14 +2871,15 @@ var Bigsearch = function (_Component) {
                                         id: 'big-search-input',
                                         type: 'text',
                                         placeholder: 'Apa yang ingin anda urus ?' }),
-                                    _react2.default.createElement(
+                                    this.state.loading ? _react2.default.createElement(_BigSearchRecomendation.RecommendationText, { text: 'Melakukan pencarian' }) : null,
+                                    !this.state.loading && this.state.result.length == 0 ? _react2.default.createElement(
                                         'small',
                                         null,
                                         'contoh: membuat surat nikah, perpanjang STNK, dll'
-                                    ),
-                                    _react2.default.createElement(_BigSearchRecomendation2.default, {
-                                        data: []
-                                    })
+                                    ) : null,
+                                    !this.state.loading && this.state.result.status ? this.state.result.status == 200 ? _react2.default.createElement(_BigSearchRecomendation2.default, {
+                                        data: this.state.result.result
+                                    }) : _react2.default.createElement(_BigSearchRecomendation.RecommendationText, { text: 'Hasil pencarian tidak ditemukan' }) : null
                                 )
                             )
                         )
@@ -2916,11 +2921,17 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+exports.RecommendationText = RecommendationText;
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(10);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2942,13 +2953,20 @@ var Recomendation = function (_PureComponent) {
     _createClass(Recomendation, [{
         key: 'render',
         value: function render() {
+
             return _react2.default.createElement(
                 'div',
-                { className: 'deck-result', id: 'bigsearch-recomendation' },
+                { className: 'deck-result', id: 'bigsearch-recomendation', style: { opacity: 1, display: 'inherit' } },
                 _react2.default.createElement(
                     'div',
                     { className: 'deck-result-content bg-white', style: { padding: 0 } },
-                    _react2.default.createElement('div', { className: 'grid', id: 'bigsearch-recomendation-result' })
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'grid', id: 'bigsearch-recomendation-result' },
+                        this.props.data.map(function (n, key) {
+                            return _react2.default.createElement(RecommendationItem, _extends({ key: key }, n));
+                        })
+                    )
                 )
             );
         }
@@ -2960,17 +2978,50 @@ var Recomendation = function (_PureComponent) {
 exports.default = Recomendation;
 
 
-var Loading = function Loading() {
+var RecommendationItem = function RecommendationItem(props) {
     return _react2.default.createElement(
         'div',
         { className: 'col-12 card-result card-result-small' },
         _react2.default.createElement(
             'div',
             { className: 'card-result-inside' },
-            'mengambil data...'
+            _react2.default.createElement(
+                'div',
+                { className: 'logo' },
+                _react2.default.createElement('img', { src: props.logo, title: 'logo lembaga' })
+            ),
+            _react2.default.createElement(
+                'div',
+                { className: 'text' },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'text-title' },
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        { to: '/hasil/' + props.title.replace(/ /g, '-') + '-' + props.id },
+                        props.title
+                    )
+                )
+            )
         )
     );
 };
+
+function RecommendationText(props) {
+    return _react2.default.createElement(
+        'div',
+        { className: 'deck-result-content bg-white', style: { padding: 0 } },
+        _react2.default.createElement(
+            'div',
+            { className: 'grid', id: 'bigsearch-recomendation-result' },
+            _react2.default.createElement(
+                'div',
+                { className: 'col-12 card-result card-result-small' },
+                props.text
+            )
+        )
+    );
+}
 
 /***/ }),
 /* 106 */
