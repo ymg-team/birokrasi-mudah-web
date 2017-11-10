@@ -2,9 +2,33 @@
     {
         "id": 1,
         "title": "Perpanjang STNK (Surat Tanda Nomor Kendaraan)",
-        "logo": "",
+        "logo": "/images/logos/samsat.png",
+        "department": "Samsat Kota Bekasi",
         "city_id": 1,
         "department_id": 1,
+        "location": [
+            {
+                "name": "Samsat Kota Bekasi",
+                "desc": "CPPD Kota Bekasi (Samsat Kota Bekasi)",
+                "coordinat": {
+                    "lat": "-6.250885",
+                    "lng": "107.0255372",
+                    "zoom": 5
+                }
+            },
+            {
+                "name": "Samsat Oulet Kota Harapan Indah",
+                "desc": "Layanan pengesahan STBNK setiap tahun, pembayaran PKB dan SWDKLLJ yang tempatnya di sentra-sentra perbelanjaan/pusat kegiatan masyarakat",
+                "coordinat": {
+                    "lat": "-6.1920607",
+                    "lng": "106.9779762",
+                    "zoom": 18
+                }
+            }
+        ],
+        "contacts": [
+           {"type": "phone", "value": "(022) 756 6197", "desc": "CPPD Kota Bekasi (Samsat Kota Bekasi)"}
+        ],
         "requirement": [
 
         ],
@@ -15,7 +39,8 @@
     {
         "id": 2,
         "title": "Balik nama STNK (Surat Tanda Nomor Kendaraan)",
-        "logo": "",
+        "logo": "/images/logos/samsat.png",
+        "department": "Samsat Kota Bekasi",
         "city_id": 1,
         "department_id": 1,
         "requirement": [
@@ -28,7 +53,36 @@
     {
         "id": 3,
         "title": "Membuat Surat Nikah",
-        "logo": "",
+        "logo": "/images/logos/kua.png",
+        "department": "Kantor Urusan Agama Kota Bekasi",
+        "city_id": 1,
+        "department_id": 2,
+        "requirement": [
+
+        ],
+        "mechanism": [
+            
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Membuat Paspor Baru",
+        "logo": "/images/logos/direktorat-jenderal-imigrasi.png",
+        "department": "Direktorat Jendetal Imigrasi Kota Bekasi",
+        "city_id": 1,
+        "department_id": 2,
+        "requirement": [
+            
+        ],
+        "mechanism": [
+            
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Membuat NPWP",
+        "logo": "/images/logos/direktorat-jenderal-pajak.png",
+        "department": "Direktorar Jenderal Pajak Kota Bekasi",
         "city_id": 1,
         "department_id": 2,
         "requirement": [

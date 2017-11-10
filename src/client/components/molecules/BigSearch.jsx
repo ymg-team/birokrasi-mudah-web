@@ -76,6 +76,8 @@ export default class Bigsearch extends Component
                                 <i className='fa fa-search icon-home-search'> </i>
                                 <input 
                                     onChange={(e) => this.handleChangeText(e)}
+                                    autoComplete='off'
+                                    autoCorrect='off'
                                     className='input-lg input-outline-white input-home-search' 
                                     id='big-search-input' 
                                     type='text' 
@@ -102,7 +104,7 @@ function recommendationTransform(data)
 
     data.map(n => {
         nextdata.push({
-            logo: 'http://birokrasi-mudah.netlify.com/images/logos/polda-metro-jaya.png',
+            logo: n.logo,
             link: '/hasil/' + (n.title.replace(/ /g,'-')) + '-' + n.id,
             text: n.title
         })
