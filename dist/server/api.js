@@ -19,6 +19,7 @@ var Router = _express2.default.Router();
 // routes
 Router.get('/recommendation', getRecommendation);
 Router.get('/hasil/:title', getResult);
+Router.get('/popular', getPopular);
 
 exports.default = Router;
 
@@ -72,4 +73,18 @@ function getResult(req, res) {
     if (!result) data = (0, _http.jsonResponse)(204);else data = (0, _http.jsonResponse)(200, 'success', result);
 
     return res.status(200).json(data);
+}
+
+//get popular keyword
+function getPopular(req, res) {
+    var data = require('../../static_data/popular_search');
+    var result = require('../../static_data/results');
+    var popular_data = [];
+    data.map(function (n, key) {
+        popular_data.push((0, _lodash.find)(result, function (m) {
+            return m.id == n;
+        }));
+    });
+
+    res.status(200).json((0, _http.jsonResponse)(200, 'success', { result: popular_data }));
 }

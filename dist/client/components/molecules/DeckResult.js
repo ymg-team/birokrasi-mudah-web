@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
@@ -14,9 +16,9 @@ var _Subtitle = require('../atoms/Subtitle');
 
 var _Subtitle2 = _interopRequireDefault(_Subtitle);
 
-var _CardResult = require('../atoms/CardResult');
+var _CardDeckResult = require('../atoms/CardDeckResult');
 
-var _CardResult2 = _interopRequireDefault(_CardResult);
+var _CardDeckResult2 = _interopRequireDefault(_CardDeckResult);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -58,108 +60,9 @@ var DeckResult = function (_Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'grid' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'col-6_sm-12 card-result' },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'card-result-inside' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'logo' },
-                                        ' ',
-                                        _react2.default.createElement('img', { src: 'images/logos/polda-metro-jaya.png', title: 'polda metro jaya' })
-                                    ),
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'text' },
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'text-title' },
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: 'result.html' },
-                                                'Cara perpanjang STNK'
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'text-stats' },
-                                            'di Polda metro jaya',
-                                            _react2.default.createElement('br', null),
-                                            'dicari 3400x - oleh 234 pengguna '
-                                        )
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'col-6_sm-12 card-result' },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'card-result-inside' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'logo' },
-                                        ' ',
-                                        _react2.default.createElement('img', { src: 'images/logos/kua.png', title: 'KUA' })
-                                    ),
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'text' },
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'text-title' },
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: 'result.html' },
-                                                'Membuat surat nikah'
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'text-stats' },
-                                            'di KUA daerah 1',
-                                            _react2.default.createElement('br', null),
-                                            'dicari 3400x - oleh 234 pengguna '
-                                        )
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'col-6_sm-12 card-result' },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'card-result-inside' },
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'logo' },
-                                        ' ',
-                                        _react2.default.createElement('img', { src: 'images/logos/bp2t.png', title: 'KUA' })
-                                    ),
-                                    _react2.default.createElement(
-                                        'div',
-                                        { className: 'text' },
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'text-title' },
-                                            _react2.default.createElement(
-                                                'a',
-                                                { href: 'result.html' },
-                                                'Membuat surat izin usaha'
-                                            )
-                                        ),
-                                        _react2.default.createElement(
-                                            'div',
-                                            { className: 'text-stats' },
-                                            'di KUA daerah 1',
-                                            _react2.default.createElement('br', null),
-                                            'dicari 3400x - oleh 234 pengguna '
-                                        )
-                                    )
-                                )
-                            )
+                            this.props.data.map(function (n, key) {
+                                return _react2.default.createElement(_CardDeckResult2.default, _extends({ key: key }, n));
+                            })
                         )
                     )
                 )

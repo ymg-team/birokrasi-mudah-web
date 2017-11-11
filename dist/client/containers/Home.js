@@ -18,6 +18,10 @@ var _BigSearch = require('../components/molecules/BigSearch');
 
 var _BigSearch2 = _interopRequireDefault(_BigSearch);
 
+var _PopularResult = require('../components/organisms/PopularResult');
+
+var _PopularResult2 = _interopRequireDefault(_PopularResult);
+
 var _DeckResult = require('../components/molecules/DeckResult');
 
 var _DeckResult2 = _interopRequireDefault(_DeckResult);
@@ -197,11 +201,7 @@ var Home = function (_Component) {
                     )
                 ),
                 _react2.default.createElement('div', { className: 'm-lg' }),
-                _react2.default.createElement(_DeckResult2.default, {
-                    title: 'Pencarian Populer',
-                    subtitle: 'Berikut adalah beberapa keperluan yang sering dicari oleh pengunjung.',
-                    showmore: true
-                })
+                _react2.default.createElement(_PopularResult2.default, null)
             );
         }
     }]);

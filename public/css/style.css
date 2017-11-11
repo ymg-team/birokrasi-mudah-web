@@ -1591,7 +1591,7 @@ select.home-select-white {
     .modal .modal-title h1, .modal .modal-title h2 {
       font-weight: 300; }
   .modal .modal-content {
-    color: #808080;
+    color: #FFF;
     overflow-y: auto;
     overflow-x: hidden;
     max-height: calc(100vh - 180px); }
@@ -1616,6 +1616,7 @@ select.home-select-white {
 
 .big-result-card {
   background: #FFF;
+  color: #808080;
   padding: 1em;
   margin-bottom: 2em; }
   .big-result-card a {

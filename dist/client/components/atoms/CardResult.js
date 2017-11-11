@@ -52,8 +52,8 @@ var CardResult = function (_PureComponent) {
                             'div',
                             { className: 'text-title' },
                             _react2.default.createElement(
-                                'a',
-                                { href: this.props.target },
+                                Link,
+                                { to: this.props.target },
                                 this.props.target
                             )
                         ),
