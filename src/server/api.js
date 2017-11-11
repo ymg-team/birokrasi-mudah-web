@@ -7,6 +7,7 @@ const Router = Express.Router()
 // routes
 Router.get('/recommendation', getRecommendation)
 Router.get('/hasil/:title', getResult)
+Router.get('/popular', getPopular)
 
 export default Router
 
@@ -63,4 +64,19 @@ function getResult(req, res)
         data = jsonResponse(200, 'success', result)
     
     return res.status(200).json(data)
+}
+
+//get popular keyword
+function getPopular(req, res)
+{
+    const data = require('../../static_data/popular_search')
+    const result = require('../../static_data/results')
+    const popular_data = []
+    data.map((n, key) => {
+        popular_data.push(find(result, (m) => {
+            return m.id == n
+        }))
+    })
+
+    res.status(200).json(jsonResponse(200, 'success', {result: popular_data}))
 }

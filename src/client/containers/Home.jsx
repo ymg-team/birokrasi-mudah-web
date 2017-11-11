@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Helmet from '../components/atoms/Helmet'
 import Bigsearch from '../components/molecules/BigSearch'
+import PopularResult from '../components/organisms/PopularResult'
 import DeckResult from '../components/molecules/DeckResult'
 
 export default class Home extends Component 
@@ -72,11 +73,7 @@ export default class Home extends Component
                 <div className='m-lg' />
 
                 {/* start of deck result */}
-                <DeckResult 
-                    title='Pencarian Populer'
-                    subtitle='Berikut adalah beberapa keperluan yang sering dicari oleh pengunjung.'
-                    showmore={true}
-                />
+                <PopularResult />
                 {/* end of deck result */}
 
             </div>

@@ -22,7 +22,7 @@ export default class CardResult extends PureComponent
                         <img src={this.props.image} title={this.props.title} />
                     </div>
                     <div className='text'>
-                        <div className='text-title'><a href={this.props.target}>{this.props.target}</a></div>
+                        <div className='text-title'><Link to={this.props.target}>{this.props.target}</Link></div>
                         <div className='text-stats'>di {this.props.location}<br />dicari {this.props.count.search}x - oleh {this.props.count.user} pengguna </div>
                     </div>
                 </div>

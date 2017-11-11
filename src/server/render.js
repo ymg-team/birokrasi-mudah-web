@@ -36,6 +36,7 @@ function renderHtml(html: string, state: Object={}):string
             <link href="/libraries/font-awesome/css/font-awesome.min.css" rel="stylesheet">
             <link rel="manifest" href="/manifest.json">
             <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700" rel="stylesheet">
+            <link rel="shortcut icon" href="/images/favicon.png">
             ${(Helmet.rewind()).title.toString()}
             ${(Helmet.rewind()).meta.toString()}
             ${(Helmet.rewind()).link.toString()}
