@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Helmet = require('../components/atoms/Helmet');
+
+var _Helmet2 = _interopRequireDefault(_Helmet);
+
 var _BigSearch = require('../components/molecules/BigSearch');
 
 var _BigSearch2 = _interopRequireDefault(_BigSearch);
@@ -41,6 +45,9 @@ var Home = function (_Component) {
             return _react2.default.createElement(
                 'div',
                 null,
+                _react2.default.createElement(_Helmet2.default, {
+                    title: 'Birokrasi Mudah - Iya.. serius !'
+                }),
                 _react2.default.createElement(_BigSearch2.default, null),
                 _react2.default.createElement(
                     'div',

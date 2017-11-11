@@ -39,7 +39,7 @@ var Bigsearch = function (_Component) {
         var _this = _possibleConstructorReturn(this, (Bigsearch.__proto__ || Object.getPrototypeOf(Bigsearch)).call(this));
 
         _this.state = {
-            recommendations: [],
+            result: [],
             loading: false
         };
         return _this;
@@ -51,7 +51,6 @@ var Bigsearch = function (_Component) {
             var _this2 = this;
 
             console.log('reset timer...');
-            recomendation.loading();
             clearTimeout(timer);
             var value = e.target.value;
 
@@ -60,26 +59,30 @@ var Bigsearch = function (_Component) {
             }, function () {
                 if (value != '') timer = setTimeout(function () {
                     return _this2.getRecommendation(value);
-                }, 2000);else recomendation.close();
+                }, 1000);else _this2.setState({ result: [] });
             });
         }
     }, {
         key: 'getRecommendation',
         value: function getRecommendation(val) {
-            console.log('show recommentaion...');
+            var _this3 = this;
+
+            console.log('get recommentaion...');
             this.setState({
                 loading: false
             }, function () {
-                (0, _apiCaller2.default)('get', '/api/recommendation?q=' + val).then(function (res) {
-                    console.log(res);
-                    recomendation.show(res.result);
+                (0, _apiCaller2.default)('get', '/api/recommendation?keyword=' + val).then(function (result) {
+                    _this3.setState({
+                        loading: false,
+                        result: result
+                    });
                 });
             });
         }
     }, {
         key: 'render',
         value: function render() {
-            var _this3 = this;
+            var _this4 = this;
 
             return _react2.default.createElement(
                 'nav',
@@ -142,20 +145,23 @@ var Bigsearch = function (_Component) {
                                     ),
                                     _react2.default.createElement('input', {
                                         onChange: function onChange(e) {
-                                            return _this3.handleChangeText(e);
+                                            return _this4.handleChangeText(e);
                                         },
+                                        autoComplete: 'off',
+                                        autoCorrect: 'off',
                                         className: 'input-lg input-outline-white input-home-search',
                                         id: 'big-search-input',
                                         type: 'text',
                                         placeholder: 'Apa yang ingin anda urus ?' }),
-                                    _react2.default.createElement(
+                                    this.state.loading ? _react2.default.createElement(_BigSearchRecomendation.RecommendationText, { text: 'Melakukan pencarian' }) : null,
+                                    !this.state.loading && this.state.result.length == 0 ? _react2.default.createElement(
                                         'small',
                                         null,
                                         'contoh: membuat surat nikah, perpanjang STNK, dll'
-                                    ),
-                                    _react2.default.createElement(_BigSearchRecomendation2.default, {
-                                        data: []
-                                    })
+                                    ) : null,
+                                    !this.state.loading && this.state.result.status ? this.state.result.status == 200 ? _react2.default.createElement(_BigSearchRecomendation2.default, {
+                                        data: this.state.result.result
+                                    }) : _react2.default.createElement(_BigSearchRecomendation.RecommendationText, { text: 'Hasil pencarian tidak ditemukan' }) : null
                                 )
                             )
                         )
@@ -170,3 +176,18 @@ var Bigsearch = function (_Component) {
 }(_react.Component);
 
 exports.default = Bigsearch;
+
+
+function recommendationTransform(data) {
+    var nextdata = [];
+
+    data.map(function (n) {
+        nextdata.push({
+            logo: n.logo,
+            link: '/hasil/' + n.title.replace(/ /g, '-') + '-' + n.id,
+            text: n.title
+        });
+    });
+
+    return nextdata;
+}

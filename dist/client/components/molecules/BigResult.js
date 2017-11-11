@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
@@ -21,6 +23,10 @@ var _CardMap2 = _interopRequireDefault(_CardMap);
 var _CardStep = require('../atoms/BigResult/CardStep');
 
 var _CardStep2 = _interopRequireDefault(_CardStep);
+
+var _CardContact = require('../atoms/BigResult/CardContact');
+
+var _CardContact2 = _interopRequireDefault(_CardContact);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42,6 +48,12 @@ var BigResult = function (_Component) {
     _createClass(BigResult, [{
         key: 'render',
         value: function render() {
+            var _props = this.props,
+                requirement = _props.requirement,
+                mechanism = _props.mechanism,
+                contacts = _props.contacts,
+                location = _props.location;
+
             return _react2.default.createElement(
                 'div',
                 { className: 'big-result' },
@@ -49,43 +61,45 @@ var BigResult = function (_Component) {
                     'div',
                     { className: 'container' },
                     _react2.default.createElement(_SubtitleResult2.default, {
-                        title: 'Alamat dan Jandwal',
+                        title: 'Alamat dan Jadwal',
                         subtitle: 'Berikut alamat dan jadwal untuk bisa melakukan "Perpanjang Surat Tanda Kendaraan Bermotor(STNK) di Kota Bekasi"'
                     }),
-                    _react2.default.createElement(_CardMap2.default, null),
+                    location && location.length > 0 ? _react2.default.createElement(_CardMap2.default, { location: location }) : _react2.default.createElement(TextNoContent, null),
                     _react2.default.createElement(_SubtitleResult2.default, {
                         title: 'Persyaratan',
                         subtitle: 'Pastikan anda menyiapkan segala persiapan yang ada di bawah ini.'
                     }),
-                    [1, 2].map(function (n, key) {
+                    requirement && requirement.length > 0 ? requirement.map(function (n, key) {
                         return _react2.default.createElement(_CardStep2.default, {
+                            text: n,
                             key: key,
                             checkbox: false,
-                            is_last: key == 1
+                            is_last: key == requirement.length - 1
                         });
-                    }),
+                    }) : _react2.default.createElement(TextNoContent, null),
                     _react2.default.createElement(_SubtitleResult2.default, {
                         title: 'Mekanisme',
                         subtitle: 'Silahkan mengikuti langkah-langkah dibawah ini untuk "Perpanjangan Surat Tanda Nomor Kendaraan (STNK)".'
                     }),
-                    [1, 2, 3, 4, 5, 6, 7, 8].map(function (n, key) {
+                    mechanism && mechanism.length > 0 ? mechanism.map(function (n, key) {
                         return _react2.default.createElement(_CardStep2.default, {
+                            text: n,
                             key: key,
                             checkbox: false,
-                            is_last: key == 7
+                            is_last: key == mechanism.length - 1
                         });
-                    }),
+                    }) : _react2.default.createElement(TextNoContent, null),
                     _react2.default.createElement(_SubtitleResult2.default, {
-                        title: 'Mekanisme',
-                        subtitle: 'Silahkan mengikuti langkah-langkah dibawah ini untuk "Perpanjangan Surat Tanda Nomor Kendaraan (STNK)".'
+                        title: 'Kontak',
+                        subtitle: 'Untuk keterangan lebih lanjut, silahkan hubungi kontak dibawah ini'
                     }),
-                    [1, 2, 3].map(function (n, key) {
-                        return _react2.default.createElement(_CardStep2.default, {
+                    contacts && contacts.length > 0 ? contacts.map(function (n, key) {
+                        return _react2.default.createElement(_CardContact2.default, _extends({
                             key: key,
-                            icon: 'fa fa-phone',
+                            icon: true,
                             is_last: key == 2
-                        });
-                    })
+                        }, n));
+                    }) : _react2.default.createElement(TextNoContent, null)
                 )
             );
         }
@@ -95,3 +109,12 @@ var BigResult = function (_Component) {
 }(_react.Component);
 
 exports.default = BigResult;
+
+
+var TextNoContent = function TextNoContent(props) {
+    return _react2.default.createElement(
+        'p',
+        { className: 'align-center', style: { marginBottom: '2em' } },
+        'Konten belum di buat admin'
+    );
+};

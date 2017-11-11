@@ -4,11 +4,19 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+exports.RecommendationText = RecommendationText;
 
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
+
+var _result = require('../../store/result');
+
+var _reactRouterDom = require('react-router-dom');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30,14 +38,20 @@ var Recomendation = function (_PureComponent) {
     _createClass(Recomendation, [{
         key: 'render',
         value: function render() {
-            console.log(this.props.loading);
+
             return _react2.default.createElement(
                 'div',
-                { className: 'deck-result', id: 'bigsearch-recomendation' },
+                { className: 'deck-result', id: 'bigsearch-recomendation', style: { opacity: 1, display: 'inherit' } },
                 _react2.default.createElement(
                     'div',
                     { className: 'deck-result-content bg-white', style: { padding: 0 } },
-                    _react2.default.createElement('div', { className: 'grid', id: 'bigsearch-recomendation-result' })
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'grid', id: 'bigsearch-recomendation-result' },
+                        this.props.data.map(function (n, key) {
+                            return _react2.default.createElement(RecommendationItem, _extends({ key: key }, n));
+                        })
+                    )
                 )
             );
         }
@@ -49,14 +63,51 @@ var Recomendation = function (_PureComponent) {
 exports.default = Recomendation;
 
 
-var Loading = function Loading() {
+var RecommendationItem = function RecommendationItem(props) {
     return _react2.default.createElement(
         'div',
         { className: 'col-12 card-result card-result-small' },
         _react2.default.createElement(
             'div',
             { className: 'card-result-inside' },
-            'mengamil data...'
+            _react2.default.createElement(
+                'div',
+                { className: 'logo' },
+                _react2.default.createElement('img', { src: props.logo, title: 'logo lembaga' })
+            ),
+            _react2.default.createElement(
+                'div',
+                { className: 'text' },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'text-title' },
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        {
+                            onClick: function onClick() {
+                                (0, _result.pushData)(props);
+                            },
+                            to: '/hasil/' + props.title.replace(/ /g, '-') + '-' + props.id },
+                        props.title
+                    )
+                )
+            )
         )
     );
 };
+
+function RecommendationText(props) {
+    return _react2.default.createElement(
+        'div',
+        { className: 'deck-result-content bg-white', style: { padding: 0 } },
+        _react2.default.createElement(
+            'div',
+            { className: 'grid', id: 'bigsearch-recomendation-result' },
+            _react2.default.createElement(
+                'div',
+                { className: 'col-12 card-result card-result-small' },
+                props.text
+            )
+        )
+    );
+}

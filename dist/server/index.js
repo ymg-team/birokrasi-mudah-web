@@ -18,7 +18,7 @@ var _path2 = _interopRequireDefault(_path);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var PORT = 8080;
+var PORT = process.env.PORT || 5000;
 var App = (0, _express2.default)();
 
 App.use('/bundle', _express2.default.static(_path2.default.resolve(__dirname + '/../../bundle')));

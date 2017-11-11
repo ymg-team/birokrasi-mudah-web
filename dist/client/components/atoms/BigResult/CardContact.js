@@ -10,6 +10,13 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var icons = {
+    phone: 'fa fa-phone',
+    web: 'fa fa-globe',
+    facebook: 'fa fa-facebook',
+    twitter: 'fa fa-twitter'
+};
+
 exports.default = function (props) {
     return _react2.default.createElement(
         'div',
@@ -25,13 +32,16 @@ exports.default = function (props) {
                     { className: 'big-text' },
                     _react2.default.createElement(
                         'div',
-                        { className: 'big-text-left' },
-                        _react2.default.createElement('input', { className: 'btn btn-white', type: 'checkbox' })
-                    ),
-                    _react2.default.createElement(
-                        'div',
                         { className: 'big-text-right' },
-                        props.text
+                        _react2.default.createElement('i', { className: icons[props.type] }),
+                        ' ',
+                        props.value,
+                        _react2.default.createElement('br', null),
+                        _react2.default.createElement(
+                            'small',
+                            null,
+                            props.desc
+                        )
                     )
                 )
             )
