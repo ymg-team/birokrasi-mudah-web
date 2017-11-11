@@ -41,9 +41,9 @@
         "mechanism": [
             "Ambil formulir permohonan perpanjang STNK di loket pendaftaran, isi data sesuai dengan pada STNK dan BPKB",
             "Lampirkan dokumen yang tertulis di formulir, untuk kemudian diserahkan ke loket penyerahan berkas",
-            "Kamu akan mendapatkan slip pembayaran pajak dan kamu bisa melihat berapa besar pajak yang harus kamu bayarkan.",
-            "Pergilah ke kasir untuk membayar pajak tersebut. Setelah membayar pajak perpanjang STNK, kamu akan mendapatkan bukti pelunasan pajak. Lalu serahkan bukti pelunasan pajak ke loket pengambilan STNK.",
-            "Setelah itu nama kamu akan dipanggil dan STNK barumu telah diperpanjang satu tahun."
+            "Anda akan mendapatkan slip pembayaran pajak dan anda bisa melihat berapa besar pajak yang harus anda bayarkan.",
+            "Pergilah ke kasir untuk membayar pajak tersebut. Setelah membayar pajak perpanjang STNK, anda akan mendapatkan bukti pelunasan pajak. Lalu serahkan bukti pelunasan pajak ke loket pengambilan STNK.",
+            "Setelah itu nama anda akan dipanggil dan STNK barumu telah diperpanjang satu tahun."
         ]
     },
     {
@@ -62,39 +62,57 @@
     },
     {
         "id": 3,
-        "title": "Membuat Surat Nikah",
+        "title": "Menikah di KUA",
         "logo": "/images/logos/kua.png",
         "department": "Kantor Urusan Agama Kota Bekasi",
         "city_id": 1,
         "department_id": 2,
         "requirement": [
-
+            "Blank N1 Surat keterangan untuk nikah",
+            "Blank N2 Surat keterangan asal-usul",
+            "Blank N3 Surat keterangan persetujuan mempelai",
+            "Blank N4 Surat keterangan persetujuan tentang orang tua",
+            "Surat pemberitahuan kehendak nikah (model N7) apabila calon pengantin berhalangan, pemberitahuan nikah dapat dilakukan oleh wali atau wakilnya.",
+            "Bukti imunisasi TT(Tetanus Toxoid) I calon pengantin wanita, Kartu imunisasi, dan Imunisasi TT II dari Puskesmas setempat.",
+            "Biaya pernikahan Rp 30.000,- (untuk kedua calon)",
+            "Pas foto ukuran 3 x 2 sebanyak 3 lembar",
+            "Bagi yang tidak ada izin dari orang tua/wali: Surat izin pengadilan apabila tidak ada izin dari orang tua/wali",
+            "Bagi yang poligami : Surat izin Pengadilan bagi suami yang hendak beristri lebih dari seorang",
+            "Bagi anggota TNI/POLRI: membawa surat izin dari atasan masing-masing",
+            "Bagi mereka yang perceraiannya terjadi sebelum berlakunya Undang-Undang Nomor 7 tahun 1989: Akta cerai atau kutipan buku pendaftaran talak/buku pendaftaran cerai",
+            "Bagi yang dibawah umur minimal: Dispensasi dari pengadilan bagi calon suami yang belum berumur 19 tahun dan bagi calon istri yang belum berumur 16 tahun",
+            "Bagi janda/duda yang akan menikah: Surat keterangan tentang kematian suami/istri yang ditandatangani oleh Kepala Desa/Lurah atau pejabat berwenang yang menjadi dasar pengisian model N6"
         ],
         "mechanism": [
-            
-        ]
+            "Masing-masing calon mendatangi ketua RT untuk mengurus surat pengantar ke kelurahan",
+            "Mendatangi kelurahan untuk mengurus surat pengantar nikah ke KUA",
+            "Jika pernikahan kurang dari 10 hari kerja sejak waktu pendaftaran, harus minta dispensasi dari kantor kecamatan",
+            "Jika lokasi menikah diluar KUA (maka membayar biaya akad nikah, biaya berbeda-beda tergantung lokasi)",
+            "Menyerahkan bukti pembayaran ke KUA",
+            "Mendatangi KUA tempat akad nikah untuk melakukan pemeriksaat surat-surat dan data-data",
+            "Melaksanakan akad nikah sesuai dengan tempat yang waktu yang telah disetujui"
+        ],
+        "contacts": [
+            {"type": "phone", "value": "(021) 8824050", "desc": "KUA Kota Bekasi (Jalan Kimangun Sarkoro No.50, Bekasi Jaya, Bekasi Timur, Bekasi Jaya, Bekasi, Kota Bks, Jawa Barat 17112)"},
+            {"type": "phone", "value": "(021) 82433543", "desc": "KUA Kota Bekasi ( Jl. Pulo Ribung No.2, Pekayon Jaya, Bekasi Sel., Kota Bks, Jawa Barat 17148)"}
+         ],
+        "notes" : [
+            {
+                "title": "Awas buku nikah palsu",
+                "content": "Setelah akad nikah selesai dilakukan di KUA, kita akan mendapat buku nikah. Buku nikah ini harus Anda cek untuk memastikan keasliannya. Pasalnya saat ini juga pernah ditemukan kasus pemalsuan buku nikah. Dalam hal ini Anda harus menghindari buku nikah palsu dengan ciri-ciri : <br/><ul><li>Potongan buku dan lambang Garuda tidak simetris</li><li>Kertas lebih tipis dan kelihatan murahan</li><li>Hologram terlalu mengkilap</li><li>Di setiap lembar tak ada gambar Garuda kalau dilihat pakai sinar ultraviolet</li></ul>"
+            }
+        ],
+        "reference": "https://www.cermati.com/artikel/tata-cara-dan-biaya-nikah-di-kua"
     },
     {
         "id": 4,
-        "title": "Membuat Paspor Baru",
+        "title": "Membuat Paspor Baru (untuk WNI Bersomisili di Indonesia)",
         "logo": "/images/logos/direktorat-jenderal-imigrasi.png",
         "department": "Direktorat Jendetal Imigrasi Kota Bekasi",
         "city_id": 1,
         "department_id": 2,
-        "requirement": [
-            "Akte kelahiran asli beserta fotocopy ( jika tidak memilikinya sertakan buku nikah dan ijazah sd/smp/sma asli beserta fotocopy )",
-            "KK ( Kartu Keluarga ) asli beserta fotocopy.",
-            "KTP ( Kartu Tanda Penduduk ) asli beserta fotocopy.",
-            "Jika memiliki anak yang ingin dibuat paspor, bawa dokumen berikut (Buku nikah orang tua dan paspor orang tua (jika ada) )",
-            "Materai Rp 6000,-"
-        ],
-        "mechanism": [
-            "Ambil formulir di pos satpam yang berada di depan kantor imigrasi.",
-            "Datanglah lebih pagi, kantor imigrasi akan buka pada pukul 07.00 – 16.00 dan istirahat pada pukul 12.00 – 13.00, biasanya kantor imigrasi sudah di penuhi oleh masyarakat pada pukul 09.00 oleh karena itu bagus jika kamu datang sebelum jam tersebut.",
-            "Gunakanlah pakaian yang rapih dan bersih karena foto di paspor akan terus kamu gunakan sampai 5 tahun ke depan. Bagus jika kamu menggunakan pakaian selain warna putih karena background sesi foto akan berwarna putih.",
-            "Ambil nomor antrian dan silahkan menunggu panggilan",
-            ""
-        ]
+        "requirement": [],
+        "mechanism": []
     },
     {
         "id": 5,

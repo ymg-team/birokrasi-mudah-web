@@ -4,6 +4,9 @@ export default class CardMap extends Component
 {
     render()
     {
+        const {location} = this.props
+        console.log(location)
+        const firstLoc = location[0]
         return(
             <div className='grid-center'> 
                 <div className='col-8_md-12_sm-12'>
@@ -16,7 +19,12 @@ export default class CardMap extends Component
                         <hr />
                         <p><strong>Jadwal <span className='text-red'>(hari ini tutup)</span></strong></p>
                         <p>
-                        Senin - Jum'at :&nbsp; <strong>07:00 - 14:00 WIB </strong><br />Sabtu :&nbsp;<strong>07:00 - 15:00 WIB </strong></p><a className='btn btn-outline-white' href='javascript:;' style={{display: 'block', textDecoration: 'none', textAlign: 'center'}}>Tampilan 2 lokasi lainnya</a>
+                        Senin - Jum'at :&nbsp; <strong>07:00 - 14:00 WIB </strong><br />Sabtu :&nbsp;<strong>07:00 - 15:00 WIB </strong></p>
+                        {
+                            location.length > 1 ? 
+                                <a className='btn btn-outline-white' href='javascript:;' style={{display: 'block', textDecoration: 'none', textAlign: 'center'}}>Tampilan lokasi lainnya</a>
+                            : null
+                        }
                     </div>
                     </div>
                 </div>

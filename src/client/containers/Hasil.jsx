@@ -75,8 +75,8 @@ export default class Hasil extends Component
                         {!this.state.result ?
                             null : 
                             <div className='align-center' style={{padding:'1em 0', display:'block'}}>
-                                <a className='btn btn-outline-white' href='javascript' style={{marginRight: '.5em'}} title='Simpan untuk dibuka dikemudian hari'> <i className='fa fa-save'> </i>&nbsp;Simpan</a>
-                                <a className='btn btn-outline-white' href='javascript' title='Download dalam bentuk PDF'><i className='fa fa-download'> </i>&nbsp;Download</a>
+                                {/* <a className='btn btn-outline-white' href='javascript' style={{marginRight: '.5em'}} title='Simpan untuk dibuka dikemudian hari'> <i className='fa fa-save'> </i>&nbsp;Simpan</a> */}
+                                {/* <a className='btn btn-outline-white' href='javascript' title='Download dalam bentuk PDF'><i className='fa fa-download'> </i>&nbsp;Download PDF</a> */}
                             </div>
                             }
                         </div>
@@ -84,7 +84,7 @@ export default class Hasil extends Component
                 </div>
                 {/* endof subheader */}
                 {/* big result */}
-                {!this.state.result ? null : <BigResult />}
+                {!this.state.result ? null : <BigResult {...this.state.result} />}
                 {/* end if big result */}
             </div>
         )   
