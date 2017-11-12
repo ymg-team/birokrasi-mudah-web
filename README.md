@@ -8,7 +8,7 @@ Aplikasi adalah mesin pencarian untuk mengetahui cara-cara mengurus birokrasi di
 - ReactJS
 
 ## Staging 
-https://birokrasimudah.herokuapp.com
+https://birokrasimudah.byidmore.com
 
 ## Contributtors 
 - yussan

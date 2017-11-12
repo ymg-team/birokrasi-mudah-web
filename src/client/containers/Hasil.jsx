@@ -69,7 +69,7 @@ export default class Hasil extends Component
                         <div className='subtitle align-center'> 
                             <h3 className='title'>{title}</h3>
                             {
-                                !this.state.result ? 'Sedang memproses data...' : <p>Update 34 Februaru 2017, oleh Samsat Kota Bekasi</p>
+                                !this.state.result ? 'Sedang memproses data...' : <p>Update 34 OKtober 2017, oleh {this.state.result.department}</p>
                             }
                         </div>
                         {!this.state.result ?
@@ -84,7 +84,7 @@ export default class Hasil extends Component
                 </div>
                 {/* endof subheader */}
                 {/* big result */}
-                {!this.state.result ? null : <BigResult {...this.state.result} />}
+                {!this.state.result ? null : <BigResult title={title} {...this.state.result} />}
                 {/* end if big result */}
             </div>
         )   

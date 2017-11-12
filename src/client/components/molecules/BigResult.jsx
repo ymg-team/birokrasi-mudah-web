@@ -8,14 +8,14 @@ export default class BigResult extends Component
 {
     render()
     {
-        const {requirement, mechanism, contacts, location} = this.props
+        const {requirement, mechanism, contacts, location, title} = this.props
         return(
             <div className='big-result'> 
                 <div className='container'>
                     {/* map */}
                     <SubtitleResult 
                         title='Alamat dan Jadwal'
-                        subtitle='Berikut alamat dan jadwal untuk bisa melakukan "Perpanjang Surat Tanda Kendaraan Bermotor(STNK) di Kota Bekasi"'
+                        subtitle={`Berikut alamat dan jadwal untuk bisa melakukan "${title}" di Kota Bekasi`}
                     />
                     {
                         location && location.length > 0 ?

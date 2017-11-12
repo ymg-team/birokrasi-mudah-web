@@ -53,6 +53,26 @@
         "department": "Samsat Kota Bekasi",
         "city_id": 1,
         "department_id": 1,
+        "location": [
+            {
+                "name": "Samsat Kota Bekasi",
+                "desc": "CPPD Kota Bekasi (Samsat Kota Bekasi)",
+                "coordinat": {
+                    "lat": "-6.250885",
+                    "lng": "107.0255372",
+                    "zoom": 5
+                }
+            },
+            {
+                "name": "Samsat Oulet Kota Harapan Indah",
+                "desc": "Layanan pengesahan STBNK setiap tahun, pembayaran PKB dan SWDKLLJ yang tempatnya di sentra-sentra perbelanjaan/pusat kegiatan masyarakat",
+                "coordinat": {
+                    "lat": "-6.1920607",
+                    "lng": "106.9779762",
+                    "zoom": 18
+                }
+            }
+        ],
         "requirement": [
 
         ],
@@ -67,6 +87,30 @@
         "department": "Kantor Urusan Agama Kota Bekasi",
         "city_id": 1,
         "department_id": 2,
+        "location": [
+            {
+                "name": "KUA Kota Bekasi",
+                "desc": "Jalan Kimangun Sarkoro No.50 Bekasi Jaya, Bekasi Timur, Bekasi Jaya, Bekasi, Kota Bekasi, Jawa Barat 17112",
+                "coordinat": {
+                    "lat": "-6.2343726",
+                    "lng": "107.0090507",
+                    "zoom": 18.45
+                }
+            },
+            {
+                "name": "KUA Kota Bekasi Wilayah Bekasi Barat",
+                "desc": "Jl. Bintara Raya No.14, Bintara, Bekasi Bar., Kota Bks, Jawa Barat 17134",
+                "coordinat": {
+                    "lat": "-6.2318648",
+                    "lng": "106.9656026",
+                    "zoom": 18.52
+                }
+            }
+        ],
+        "contacts": [
+            {"type":"phone", "value": "(021) 8824050", "desc": "Jalan Kimangun Sarkoro No.50 Bekasi Jaya, Bekasi Timur, Bekasi Jaya, Bekasi, Kota Bekasi, Jawa Barat 17112"},
+            {"type":"phone", "value": "(021) 8892760", "desc": "Jl. Bintara Raya No.14, Bintara, Bekasi Bar., Kota Bks, Jawa Barat 17134"}
+        ],
         "requirement": [
             "Blank N1 Surat keterangan untuk nikah",
             "Blank N2 Surat keterangan asal-usul",
