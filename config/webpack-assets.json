@@ -1,8 +1,8 @@
 {
   "app": {
-    "js": "/bundle/app.js"
+    "js": "/bundle/app.c246eae688249f6296fe.js"
   },
   "vendor": {
-    "js": "/bundle/vendor.js"
+    "js": "/bundle/vendor.c246eae688249f6296fe.js"
   }
 }

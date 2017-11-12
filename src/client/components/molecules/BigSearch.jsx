@@ -26,7 +26,7 @@ export default class Bigsearch extends Component
             loading: value != ''
         }, () => {
             if(value != '')
-                timer = setTimeout(() => this.getRecommendation(value), 1000)
+                timer = setTimeout(() => this.getRecommendation(value), 600)
             else 
                 this.setState({result: []})
         })
@@ -70,7 +70,7 @@ export default class Bigsearch extends Component
                             </select>
                             <br />dan ingin <strong>mengurus...</strong>
                         </h2>
-                        <form className='form-container'>
+                        <form className='form-container' method='POST' action='javascript:;'>
                             <div className='form-control' style={{position: 'relative'}}>
                                 <i className='fa fa-search icon-home-search'> </i>
                                 <input 

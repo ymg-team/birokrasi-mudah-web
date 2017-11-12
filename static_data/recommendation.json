@@ -12,5 +12,6 @@
     { "keyword": "membuat paspor", "id": 4 },
     { "keyword": "membuat npwp", "id": 5 },
     { "keyword": "npwp baru", "id": 5 },
-    { "keyword": "paspor baru", "id": 4 }
+    { "keyword": "paspor baru", "id": 4 },
+    { "keyword": "perpanjang sim", "id": 6 }
 ]

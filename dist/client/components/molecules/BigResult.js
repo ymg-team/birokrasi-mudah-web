@@ -52,7 +52,8 @@ var BigResult = function (_Component) {
                 requirement = _props.requirement,
                 mechanism = _props.mechanism,
                 contacts = _props.contacts,
-                location = _props.location;
+                location = _props.location,
+                title = _props.title;
 
             return _react2.default.createElement(
                 'div',
@@ -62,7 +63,7 @@ var BigResult = function (_Component) {
                     { className: 'container' },
                     _react2.default.createElement(_SubtitleResult2.default, {
                         title: 'Alamat dan Jadwal',
-                        subtitle: 'Berikut alamat dan jadwal untuk bisa melakukan "Perpanjang Surat Tanda Kendaraan Bermotor(STNK) di Kota Bekasi"'
+                        subtitle: 'Berikut alamat dan jadwal untuk bisa melakukan "' + title + '" di Kota Bekasi'
                     }),
                     location && location.length > 0 ? _react2.default.createElement(_CardMap2.default, { location: location }) : _react2.default.createElement(TextNoContent, null),
                     _react2.default.createElement(_SubtitleResult2.default, {

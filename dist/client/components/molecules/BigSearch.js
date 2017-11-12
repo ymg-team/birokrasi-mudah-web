@@ -59,7 +59,7 @@ var Bigsearch = function (_Component) {
             }, function () {
                 if (value != '') timer = setTimeout(function () {
                     return _this2.getRecommendation(value);
-                }, 1000);else _this2.setState({ result: [] });
+                }, 600);else _this2.setState({ result: [] });
             });
         }
     }, {
@@ -134,7 +134,7 @@ var Bigsearch = function (_Component) {
                             ),
                             _react2.default.createElement(
                                 'form',
-                                { className: 'form-container' },
+                                { className: 'form-container', method: 'POST', action: 'javascript:;' },
                                 _react2.default.createElement(
                                     'div',
                                     { className: 'form-control', style: { position: 'relative' } },

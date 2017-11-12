@@ -160,30 +160,83 @@
     },
     {
         "id": 5,
-        "title": "Membuat NPWP",
+        "title": "Membuat NPWP Untuk Pekerja yang Tidak Menjalankan Usaha Secara Offline",
         "logo": "/images/logos/direktorat-jenderal-pajak.png",
         "department": "Direktorar Jenderal Pajak Kota Bekasi",
         "city_id": 1,
         "department_id": 2,
+        "location": [
+            {
+                "name": "KPP Pratama Bekasi Utara",
+                "desc": "Jalan Sersan Aswan No. 407, Margahayu, Bekasi Timur, Margahayu, Bekasi Tim., Kota Bks, Jawa Barat 17113",
+                "coordinat": {
+                    "lat": "-6.2516408",
+                    "lng": "107.0101966",
+                    "zoom": 17.55
+                }
+            },
+            {
+                "name": "Kantor Pajak Kota Bekasi",
+                "desc": "Jalan Sersan Aswan No. 407, Margahayu, Bekasi Timur, Margahayu, Bekasi, Kota Bks, Jawa Barat 17113",
+                "coordinat": {
+                    "lat": "-6.2516444",
+                    "lng": "107.010195",
+                    "zoom": 17.55
+                }
+            }
+        ],
         "requirement": [
-
+            "Fotokopi KTP yang masih berlaku (untuk Warga Negara Indonesia / WNI)",
+            "Fotokopi paspor, Kartu Izin Tinggal Terbatas (KITAS), atau Kartu Izin Tinggal Tetap (KITAP) (Warga Negara Asing/WNA)",
+            "Bagi yang alamat domisili berbeda dengan yang di KTP, perlu membawa juga surat keterangan tempat tinggal dari kelurahan tempat anda berdomisili"
         ],
         "mechanism": [
-            
+            "Silahkan datang KPP diatas dengan membawa persyaratan yang telah disebutkan",
+            "Serahkan dokumen tersebut di bagian pendaftaran",
+            "Di bagian pendaftaran anda mendapatkan tanda terima pendaftaran Wajib Pajak yang menunjukkan bahwa Anda sebagai Wajib Pajak telah melakukan pendaftaran untuk mendapatkan NPWP.",
+            "Selanjutnya anda bisa menunggu sesuai alamat domisili anda, untuk kemudian kartu NPWP akan dikirim via Pos, waktu yang diperlukan untuk proses ini tidaklah lama, hanya satu hari kerja",
+            "Setiap langkah diatas bersifat gratis, hati-hati terhadap penipuan"
+        ],
+        "contacts": [
+            {"type": "web", "value": "http://www.pajak.go.id/", "desc": "Direktorat Jenderal Pajak"},
+            {"type": "phone", "value": "1500200", "desc": "Kring Pajak"}
         ]
     },
     {
         "id": 6,
         "title": "Perpanjang SIM (Surat Ijin Mengemudi) Golongan C",
         "logo": "/images/logos/polda-metro-jaya.png",
-        "department": "Polda Metro Jaya Bekasi Kota",
+        "department": "Kepolisian Resort Kota Metro bekasi",
+        "location": [
+            {
+                "name": "Kepolisian Resor Kota Metro Bekasi",
+                "desc": "Jalan Pramuka No.79, Marga Jaya, Bekasi Selatan, Marga Jaya, Bekasi Sel., Kota Bks, Jawa Barat 17141",
+                "coordinat": {
+                    "lat": "-6.2441069",
+                    "lng": "106.9994925",
+                    "zoom": 19.01
+                }
+            }
+        ],
         "city_id": 1,
         "department_id": 2,
         "requirement": [
-
+            "SIM lama yang dikeluarkan oleh Polresta Bekasi Kota yang masih berlaku",
+            "Fotokopi KTP 3 lembar",
+            "Biaya pokok perpanjangan SIM C Rp 75.000,-",
+            "Biaya asuransi Rp 30.000,-"           
         ],
         "mechanism": [
-            
+            "Ambil formulir pendaftaran, kemudian isi formnya dengan benar, dan sekaligus pembayaran biaya pokok senilai Rp 75.000,-",
+            "Menuju meja asuransi dan melakukan pembayaran Rp 30.000,-",
+            "Menuju form pembuatan sim, berada di samping tempat pengambilan form pendaftaran. Ada 2 halaman yang haris diisi dengan benar",
+            "Serahkan semua form tersebut ke meja informasi, tunggu sejenak untuk kamu dipanggil kelangkah foto sim",
+            "Foto SIM, meliputi tanda tangan digital dan fingerprint scan",
+            "Anda akan mendapatkan dokumen setelah proses Foto SIM, serahkan ke petugas cetak SIM, sisanya silahkan tunggu sekitar 15-60 menitan (tergantung antrian)",
+            "Jika sudah jadi, anda akan dipanggil dan SIM siap digunakan"
+        ],
+        "contacts": [
+            {"type": "phone", "value": "(021) 8841110", "desc": "Kepolisian Resor Kota Metro Bekasi"}
         ]
     }
 ]
