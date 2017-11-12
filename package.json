@@ -1,6 +1,6 @@
 {
-  "name": "egoverment-bekasi-app",
-  "version": "0.0.1",
+  "name": "birokrasi-mudah",
+  "version": "0.1.0-beta.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -50,6 +50,7 @@
     "babel-register": "^6.26.0",
     "nodemon": "^1.12.1",
     "rimraf": "^2.6.2",
+    "standard-version": "^4.2.0",
     "webpack": "^3.8.1"
   }
 }
