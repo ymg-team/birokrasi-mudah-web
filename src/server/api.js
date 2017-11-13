@@ -4,7 +4,7 @@ import {find} from 'lodash'
 
 const Router = Express.Router()
 
-// routes
+// routes for public
 Router.get('/recommendation', getRecommendation)
 Router.get('/hasil/:title', getResult)
 Router.get('/popular', getPopular)
